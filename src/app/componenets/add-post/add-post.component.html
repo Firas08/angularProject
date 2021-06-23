@@ -1,0 +1,62 @@
+<div class="hero overlay" style="background-image: url('images/bg_3.jpg');">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-9 mx-auto text-center">
+        <h1 class="text-white">Add Post</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="site-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7">
+        <!-- 
+              <div class="form-group">
+                <input type="text" [(ngModel)]="match.scoreOne" [ngModelOptions]= "{standalone: true}"class="form-control" placeholder="score One">
+              </div>
+              <div class="form-group">
+                  <input type="text"[(ngModel)]="match.scoreTwo" [ngModelOptions]= "{standalone: true}" class="form-control" placeholder="score Two">
+                </div>
+                <div class="form-group">
+                    <input type="text"[(ngModel)]="match.teamOne" [ngModelOptions]= "{standalone: true}" class="form-control" placeholder="team One">
+                  </div>
+                  <div class="form-group">
+                    <input type="text"[(ngModel)]="match.teamTwo" [ngModelOptions]= "{standalone: true}" class="form-control" placeholder="team Two">
+                  </div> -->
+        <nz-comment nzAuthor="Han Solo" [nzDatetime]="time">
+          <nz-avatar nz-comment-avatar nzIcon="user" nzSrc="//zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png">
+          </nz-avatar>
+          <nz-comment-content>
+            <p style="color:white">
+              We supply a series of design principles, practical patterns and high quality design resources (Sketch and
+              Axure), to help people
+              create their product prototypes beautifully and efficiently.
+            </p>
+          </nz-comment-content>
+          <nz-comment-action>
+            <i nz-tooltip nzTitle="Like" nz-icon nzType="like" (click)="like()"></i>
+            <span class="count like">{{ likes }}</span>
+          </nz-comment-action>
+          <nz-comment-action>
+            <i nz-tooltip nzTitle="Dislike" nz-icon nzType="dislike" (click)="dislike()"></i>
+            <span class="count dislike">{{ dislikes }}</span>
+          </nz-comment-action>
+          <nz-comment-action>Reply to</nz-comment-action>
+        </nz-comment>
+        <div class="form-group">
+          <button type="button" class="btn btn-primary py-3 px-5" (click)="showModal()">Add Post</button>
+        </div>
+
+        
+        <nz-modal [(nzVisible)]="isVisible" nzTitle="The first Modal" (nzOnCancel)="handleCancel()"
+          (nzOnOk)="handleOk()">
+          <ng-container *nzModalContent>
+            <textarea rows="4" nz-input [(ngModel)]="inputValue"></textarea>
+          </ng-container>
+        </nz-modal>
+
+      </div>
+
+    </div>
+  </div>
